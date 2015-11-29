@@ -87,8 +87,8 @@ fn main() {
     unsafe {
         let dvd = DVDOpen(path.as_ptr());
         let ifo = ifoOpen(dvd, 0);
-        let title_info = &(*ifo.tt_srpt);
-        println!("DVD has {} titles", title_info.nr_of_srpts);
+        let title_info = (*ifo).tt_srpt;
+        println!("DVD has {} titles", (*title_info).nr_of_srpts);
     }
     println!("Not dead yet!");
 }
