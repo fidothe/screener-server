@@ -1,0 +1,7 @@
+[package]
+name = "screener-server"
+version = "0.0.1"
+authors = [ "Matt Patterson <matt@werkstatt.io>" ]
+
+[dependencies]
+libc = "0.2.2"
